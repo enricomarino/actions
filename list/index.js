@@ -10,13 +10,19 @@ async function run () {
     let repo = core.getInput('repo')
     let path = core.getInput('path')
 
-    let content = await octokit.repos.getContents({
+    let response = await octokit.repos.getContents({
       owner,
       repo,
       path
-    })
-    
-    let result = JSON.stringify(content)
+    })    
+    let data = response.data
+
+    let list = []
+    for (let item of data) {
+      list.push(item.name)
+    }
+
+    let result = JSON.stringify(list)
 
     core.setOutput('result', result)
 
