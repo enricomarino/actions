@@ -1,4 +1,5 @@
 name: 'Content list'
+icon: 'book'
 description: 'Create a list of content files'
 inputs:
   source:
