@@ -4,13 +4,19 @@ branding:
   icon: 'book'
   color: 'yellow'
 inputs:
-  source:
-    description: 'The folder to inspect'
+  owner:
+    description: 'Owner'
+    required: true
+  repo:
+    description: 'Repository'
+    required: true
+  path:
+    description: 'Path'
     required: true
     default: '/'
 outputs:
-  list:
-    description: 'The folder content list'
+  result:
+    description: 'Content list'
 runs:
   using: 'node12'
   main: 'index.js'

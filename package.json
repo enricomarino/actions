@@ -1,6 +1,6 @@
 {
-  "name": "action-content-list",
-  "version": "1.0.0",
+  "name": "actions",
+  "version": "4.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {

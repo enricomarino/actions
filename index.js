@@ -1,16 +1,22 @@
-const core = require('@actions/core')
-const github = require('@actions/github')
+let core = require('@actions/core')
+let github = require('@actions/github')
 
 async function run () {
   try {
+    let token = core.getInput('token')
+    let octokit = new github.GitHub(token)
 
-    let source = core.getInput('source')
-    console.log(source)
+    let owner = core.getInput('owner')
+    let repo = core.getInput('repo')
+    let path = core.getInput('path')
 
-    let destination = core.getInput('destination')
-    console.log(destination)
+    let result = await octokit.repos.getContents({
+      owner,
+      repo,
+      path
+    })
 
-    core.setOutput('result', true)
+    core.setOutput('result', result)
 
   } catch (error) {
     let message = error.message
