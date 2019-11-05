@@ -5,13 +5,9 @@ inputs:
     description: 'Source folder'
     required: true
     default: '/'
-  destination:
-    description: 'Destination file'
-    required: true
-    default: '/index'
 outputs:
   result:
     description: 'The result'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'index.js'
