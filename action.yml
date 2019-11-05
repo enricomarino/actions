@@ -1,16 +1,16 @@
 name: 'Content list'
-description: 'Output a folder content'
+description: 'Output a folder content list'
 branding:
   icon: 'book'
   color: 'yellow'
 inputs:
   source:
-    description: 'Source folder'
+    description: 'The folder to inspect'
     required: true
     default: '/'
 outputs:
   list:
-    description: 'The folder content'
+    description: 'The folder content list'
 runs:
   using: 'node12'
   main: 'dist/index.js'
