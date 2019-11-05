@@ -1,7 +1,8 @@
 name: 'Content list'
-icon: 'book'
-color: 'yellow'
 description: 'Output a folder content'
+branding:
+  icon: 'book'
+  color: 'yellow'
 inputs:
   source:
     description: 'Source folder'
