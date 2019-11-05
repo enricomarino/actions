@@ -1,18 +1,15 @@
 name: 'Content list'
 icon: 'book'
-description: 'Create a list of content files'
+color: 'yellow'
+description: 'Output a folder content'
 inputs:
   source:
     description: 'Source folder'
     required: true
     default: '/'
-  destination:
-    description: 'Destination file'
-    required: true
-    default: '/index'
 outputs:
-  result:
-    description: 'The result'
+  list:
+    description: 'The folder content'
 runs:
   using: 'node12'
   main: 'dist/index.js'
